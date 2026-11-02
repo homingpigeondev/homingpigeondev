@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "dev.homingpigeon/homingpigeondev",
+  "title": "Homing Pigeon",
+  "description": "Homing Pigeon (homingpigeon.dev) sends text alerts from your code or agent to one phone: yours.",
+  "websiteUrl": "https://homingpigeon.dev",
+  "repository": {
+    "url": "https://github.com/homingpigeondev/homingpigeondev",
+    "source": "github"
+  },
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "homingpigeondev",
+      "version": "0.1.1",
+      "runtimeHint": "npx",
+      "transport": { "type": "stdio" },
+      "packageArguments": [{ "type": "positional", "value": "mcp" }]
+    }
+  ]
+}

@@ -1,17 +1,34 @@
 {
   "name": "homingpigeondev",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "mcpName": "dev.homingpigeon/homingpigeondev",
   "description": "Homing Pigeon (homingpigeon.dev) sends text-message alerts from your code or your coding agent to one phone: yours. No carrier registration, no app, no browser signup. Free to start.",
   "license": "MIT",
   "homepage": "https://homingpigeon.dev",
-  "repository": { "type": "git", "url": "git+https://github.com/homingpigeondev/homingpigeondev.git" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/homingpigeondev/homingpigeondev.git"
+  },
   "bin": {
     "homingpigeon": "bin/homingpigeon.js",
     "pigeon": "bin/homingpigeon.js",
     "homingpigeondev": "bin/homingpigeon.js"
   },
-  "files": ["bin", "src", "README.md", "AGENTS.md", "llms.txt", "LICENSE"],
-  "engines": { "node": ">=18" },
-  "scripts": { "test": "node --test test/*.test.js" },
-  "devDependencies": { "@modelcontextprotocol/sdk": "1.32.2" }
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "AGENTS.md",
+    "llms.txt",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2"
+  }
 }
