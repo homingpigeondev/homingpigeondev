@@ -69,6 +69,14 @@ Every error has a code, a message and a next_step. Follow next_step.
 - If carriers filter most of a number's recent texts, sending is held for up to 24 hours. The status call shows on_hold.
 - Delivery is not guaranteed. Delivery problems are reported by the status call.
 
+## Use cases
+
+- [Get a text when a stock hits your price](https://homingpigeon.dev/use-cases/stock-price-alerts)
+- [Get a text when Claude Code finishes](https://homingpigeon.dev/use-cases/claude-code-finished)
+- [Get a text when a cron job fails](https://homingpigeon.dev/use-cases/cron-job-failed)
+- [Get a text when a website changes](https://homingpigeon.dev/use-cases/website-change-alerts)
+- [Get a text when your trading bot makes a trade](https://homingpigeon.dev/use-cases/trading-bot-alerts)
+
 ## Links
 
 - [Website](https://homingpigeon.dev/)
