@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "homingpigeondev": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "homingpigeondev@latest",
+        "mcp"
+      ]
+    }
+  }
+}

@@ -16,6 +16,9 @@ Add the MCP server, and your agent gets three tools: `verify`, `send` and `statu
 # Claude Code
 claude mcp add homingpigeondev -- npx -y homingpigeondev mcp
 
+# Claude Code, as a plugin
+claude plugin install homingpigeondev --marketplace homingpigeondev/homingpigeondev
+
 # Codex
 codex mcp add homingpigeondev -- npx -y homingpigeondev mcp
 ```

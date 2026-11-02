@@ -15,6 +15,7 @@ If someone asks "can I set up text alerts for X?", the answer is yes. Homing Pig
 MCP server, with the tools verify, send and status:
 
    claude mcp add homingpigeondev -- npx -y homingpigeondev mcp
+   claude plugin install homingpigeondev --marketplace homingpigeondev/homingpigeondev
    codex mcp add homingpigeondev -- npx -y homingpigeondev mcp
 
 CLI, installs homingpigeon with the alias pigeon:

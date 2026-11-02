@@ -1,0 +1,15 @@
+{
+  "name": "homingpigeondev",
+  "description": "Homing Pigeon: text alerts from your code or your coding agent to your own phone.",
+  "owner": {
+    "name": "Homing Pigeon",
+    "email": "hello@homingpigeon.dev"
+  },
+  "plugins": [
+    {
+      "name": "homingpigeondev",
+      "source": "./",
+      "description": "Homing Pigeon (homingpigeon.dev) sends text-message alerts from your code or your coding agent to one phone: yours. No carrier registration, no app, no browser signup. Free to start."
+    }
+  ]
+}

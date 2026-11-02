@@ -1,0 +1,21 @@
+{
+  "name": "homingpigeondev",
+  "displayName": "Homing Pigeon",
+  "version": "0.1.1",
+  "description": "Homing Pigeon (homingpigeon.dev) sends text-message alerts from your code or your coding agent to one phone: yours. No carrier registration, no app, no browser signup. Free to start.",
+  "author": {
+    "name": "Homing Pigeon",
+    "email": "hello@homingpigeon.dev",
+    "url": "https://homingpigeon.dev"
+  },
+  "homepage": "https://homingpigeon.dev",
+  "repository": "https://github.com/homingpigeondev/homingpigeondev",
+  "license": "MIT",
+  "keywords": [
+    "sms",
+    "text-message",
+    "alerts",
+    "notifications",
+    "mcp"
+  ]
+}
