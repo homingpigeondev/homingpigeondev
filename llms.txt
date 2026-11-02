@@ -66,6 +66,7 @@ Every error has a code, a message and a next_step. Follow next_step.
 - Homing Pigeon is not a marketing platform and does not replace Twilio.
 - STOP is honored immediately, and the paused state shows on the next status call.
 - Keep messages to plain alerts: no link shorteners, more than one link, or promotional wording.
+- If carriers filter most of a number's recent texts, sending is held for up to 24 hours. The status call shows on_hold.
 - Delivery is not guaranteed. Delivery problems are reported by the status call.
 
 ## Links
