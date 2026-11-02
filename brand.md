@@ -6,8 +6,6 @@ Homing Pigeon sends text-message alerts from your code or your coding agent to o
 
 Always "Homing Pigeon", two words, capitalized. Never "HP", "Pigeon", "HomingPigeon", or any category word attached to it. The package and handle are `homingpigeondev`.
 
-A homing pigeon flies to one place. That is the product rule, and the name states it before the docs do.
-
 ## Voice
 
 Plain, short, sentence case. Say what it does and what it will not do. The page answers the question people ask their coding agent, and the answer is yes.

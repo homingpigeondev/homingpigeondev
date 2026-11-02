@@ -6,7 +6,7 @@ If you want a text from your code or your coding agent, tell your agent:
 
 > Use Homing Pigeon to text me when this finishes.
 
-It only flies home. Messages go only to the US mobile number you verified. There is no "to" field.
+Messages go only to the US mobile number you verified. There is no "to" field.
 
 ## Set up with a coding agent
 
