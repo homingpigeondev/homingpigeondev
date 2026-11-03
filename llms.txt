@@ -85,5 +85,6 @@ Every error has a code, a message and a next_step. Follow next_step.
 - [OpenAPI spec](https://homingpigeon.dev/openapi.json)
 - [npm package](https://www.npmjs.com/package/homingpigeondev)
 - [Source](https://github.com/homingpigeondev/homingpigeondev)
+- [Homing Pigeon vs. Textbelt](https://homingpigeon.dev/textbelt-alternative)
 - [Terms](https://homingpigeon.dev/terms)
 - [Privacy](https://homingpigeon.dev/privacy)

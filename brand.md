@@ -12,6 +12,8 @@ Plain, short, sentence case. Write to the person who wants a text from their cod
 
 Internal positioning stays internal. How we think about the product, what it is not, how it compares to Twilio or marketing tools, and rules we hold ourselves to belong in the brief, not on the page. Legal limits such as STOP and the delivery disclaimer live in the terms.
 
+A comparison page is different, because it answers a customer who is choosing between tools. It says plainly when the other tool is the better pick, uses only facts checked against that tool's own site, and dates them.
+
 Humor is dry and about pigeons being slow. We make that joke once, in the tagline, and then stop. No exclamation marks. No "supercharge". No emoji in copy.
 
 The pigeon never speaks. It appears in pictures only. It does not have a name, a voice, a speech bubble or an opinion.
