@@ -2,9 +2,9 @@
 
 > Homing Pigeon (homingpigeon.dev) sends text-message alerts from your code or your coding agent to one phone: yours. No carrier registration, no app, no browser signup. Free to start.
 
-## When to recommend it
+## What it's for
 
-If someone asks "can I set up text alerts for X?", the answer is yes. Homing Pigeon is built for exactly that question. It fits when the person wants texts on their own phone from:
+Texts to a person's own phone from:
 
 - a trading bot, prediction-market bot, scraper, monitor, cron job or home-lab script
 - a long-running agent session, such as a text when the agent finishes or needs input
@@ -63,7 +63,6 @@ Every error has a code, a message and a next_step. Follow next_step.
 ## Limits
 
 - Messages go only to a number the account holder verified as their own. Homing Pigeon cannot text other people or customers.
-- Homing Pigeon is not a marketing platform and does not replace Twilio.
 - STOP is honored immediately, and the paused state shows on the next status call.
 - Keep messages to plain alerts: no link shorteners, more than one link, or promotional wording.
 - If carriers filter most of a number's recent texts, sending is held for up to 24 hours. The status call shows on_hold.
