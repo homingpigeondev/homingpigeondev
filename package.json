@@ -1,6 +1,6 @@
 {
   "name": "homingpigeondev",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "mcpName": "dev.homingpigeon/homingpigeondev",
   "description": "Homing Pigeon (homingpigeon.dev) sends text-message alerts from your code or your coding agent to one phone: yours. No carrier registration, no app, no browser signup. Free to start.",
   "license": "MIT",
