@@ -89,10 +89,4 @@ requests.post(
 
 Run `homingpigeon key` to print your key, and keep it out of git. The full API is in [llms.txt](llms.txt) and at [homingpigeon.dev/openapi.json](https://homingpigeon.dev/openapi.json).
 
-## What it will not do
-
-- It will not text anyone else, and it cannot be made to.
-- It is not a marketing platform and does not replace Twilio.
-- Delivery is not guaranteed. Delivery problems show up in `status`.
-
 Reply STOP to any alert to stop texts immediately, and START to resume. Questions: hello@homingpigeon.dev.

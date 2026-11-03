@@ -8,7 +8,9 @@ Always "Homing Pigeon", two words, capitalized. Never "HP", "Pigeon", "HomingPig
 
 ## Voice
 
-Plain, short, sentence case. Say what it does and what it will not do. The page answers the question people ask their coding agent, and the answer is yes.
+Plain, short, sentence case. Write to the person who wants a text from their code, and say what it does for them. The page answers the question people ask their coding agent, and the answer is yes.
+
+Internal positioning stays internal. How we think about the product, what it is not, how it compares to Twilio or marketing tools, and rules we hold ourselves to belong in the brief, not on the page. Legal limits such as STOP and the delivery disclaimer live in the terms.
 
 Humor is dry and about pigeons being slow. We make that joke once, in the tagline, and then stop. No exclamation marks. No "supercharge". No emoji in copy.
 
@@ -34,7 +36,7 @@ Ground: Windows gray `#c0c0c0` in light, black `#000000` in dark. Windows are al
 
 - **Press Start 2P** for the H1, section titles, tagline and badges.
 - **Verdana** for everything you read.
-- **Courier New** for commands, sample texts and the counter.
+- **Courier New** for commands and sample texts.
 
 Two of the three are system fonts. The page loads one small font file.
 
@@ -43,10 +45,6 @@ Two of the three are system fonts. The page loads one small font file.
 The mark is the pixel pigeon: gray, iridescent green-and-purple neck, an envelope in its beak, pink feet, with a dotted line running back to a small house. Use the full image on the home page and the share card. Use the head-and-envelope crop, on black, for icons and avatars.
 
 Always show it at integer multiples of its pixel grid with `image-rendering: pixelated`. Never rotate, recolor, blur or add a drop shadow. Never put words inside the image.
-
-### The counter
-
-A six-digit hit counter reading `000000` sits under the sentence "It will not text anyone else." It is a decoration that happens to be true. It never counts anything.
 
 ## What we do not show
 
