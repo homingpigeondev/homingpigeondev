@@ -44,6 +44,16 @@ For Cursor, Cline, Windsurf and other clients set up with JSON, add this to thei
 
 Your agent asks for your number, you read back the six-digit code, and the agent saves the key on your machine. The code is the only step for you.
 
+## Use it in Claude or ChatGPT
+
+Add this URL as a custom connector, then sign in with your phone number and the six-digit code texted to you:
+
+```
+https://homingpigeon.dev/mcp
+```
+
+In Claude, that is Settings → Connectors → Add custom connector. In ChatGPT, turn on developer mode in settings, then add it as an app. Ask "Text me when we're done" and it can. Texts start with the app's name, such as `[Claude] Draft is ready.`
+
 ## Get a text when your agent finishes or needs you
 
 ```sh

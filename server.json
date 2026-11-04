@@ -8,15 +8,28 @@
     "url": "https://github.com/homingpigeondev/homingpigeondev",
     "source": "github"
   },
-  "version": "0.1.2",
+  "version": "0.1.3",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "homingpigeondev",
       "version": "0.1.2",
       "runtimeHint": "npx",
-      "transport": { "type": "stdio" },
-      "packageArguments": [{ "type": "positional", "value": "mcp" }]
+      "transport": {
+        "type": "stdio"
+      },
+      "packageArguments": [
+        {
+          "type": "positional",
+          "value": "mcp"
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://homingpigeon.dev/mcp"
     }
   ]
 }

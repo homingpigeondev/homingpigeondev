@@ -28,6 +28,9 @@ MCP server, with the tools verify, send and status:
    codex plugin marketplace add homingpigeondev/homingpigeondev && codex plugin add homingpigeondev@homingpigeondev
    gemini extensions install https://github.com/homingpigeondev/homingpigeondev
 
+Remote MCP server, with the tools send and status: https://homingpigeon.dev/mcp
+In Claude, ChatGPT and other apps that take a connector URL, the user signs in with their phone number and a six-digit code (OAuth). Coding agents can instead send Authorization: Bearer <HOMINGPIGEON_API_KEY>.
+
 Agent Skill, for agents that load skills: https://github.com/homingpigeondev/homingpigeondev/blob/main/skills/homingpigeon/SKILL.md
 
 CLI, installs homingpigeon with the alias pigeon:
