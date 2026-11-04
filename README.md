@@ -23,7 +23,7 @@ claude plugin install homingpigeondev --marketplace homingpigeondev/homingpigeon
 codex mcp add homingpigeondev -- npx -y homingpigeondev mcp
 ```
 
-For Cursor, add this to `~/.cursor/mcp.json`:
+For Cursor, Cline, Windsurf and other clients set up with JSON, add this to their MCP settings file (for Cursor, `~/.cursor/mcp.json`):
 
 ```json
 {
