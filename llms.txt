@@ -25,6 +25,10 @@ MCP server, with the tools verify, send and status:
    claude mcp add homingpigeondev -- npx -y homingpigeondev mcp
    claude plugin install homingpigeondev --marketplace homingpigeondev/homingpigeondev
    codex mcp add homingpigeondev -- npx -y homingpigeondev mcp
+   codex plugin marketplace add homingpigeondev/homingpigeondev && codex plugin add homingpigeondev@homingpigeondev
+   gemini extensions install https://github.com/homingpigeondev/homingpigeondev
+
+Agent Skill, for agents that load skills: https://github.com/homingpigeondev/homingpigeondev/blob/main/skills/homingpigeon/SKILL.md
 
 CLI, installs homingpigeon with the alias pigeon:
 
@@ -106,6 +110,9 @@ Every error has a code, a message and a next_step. Follow next_step.
 - [Homing Pigeon vs. Textbelt](https://homingpigeon.dev/textbelt-alternative)
 - [Homing Pigeon vs. Claw Messenger](https://homingpigeon.dev/claw-messenger-alternative)
 - [Homing Pigeon vs. PagerDuty for personal alerts](https://homingpigeon.dev/pagerduty-alternative)
+- [Homing Pigeon vs. SelfPing](https://homingpigeon.dev/selfping-alternative)
+- [Homing Pigeon vs. AI Text-a-roo](https://homingpigeon.dev/aitextaroo-alternative)
+- [Homing Pigeon vs. Pushover and ntfy](https://homingpigeon.dev/pushover-ntfy-alternative)
 - [Terms](https://homingpigeon.dev/terms)
 - [SMS terms](https://homingpigeon.dev/sms-terms)
 - [Privacy](https://homingpigeon.dev/privacy)
