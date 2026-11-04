@@ -25,6 +25,9 @@ codex mcp add homingpigeondev -- npx -y homingpigeondev mcp
 # Codex, as a plugin with the Homing Pigeon skill
 codex plugin marketplace add homingpigeondev/homingpigeondev
 codex plugin add homingpigeondev@homingpigeondev
+
+# Gemini CLI
+gemini extensions install https://github.com/homingpigeondev/homingpigeondev
 ```
 
 Agents that load [Agent Skills](https://agentskills.io) can use [skills/homingpigeon/SKILL.md](skills/homingpigeon/SKILL.md).
