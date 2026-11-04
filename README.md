@@ -68,6 +68,20 @@ homingpigeon status
 
 `pigeon` works as a short alias. Add `--json` for machine-readable output. If `HOMINGPIGEON_API_KEY` is set, it is used instead of the saved key.
 
+## Use it from Python
+
+```sh
+pip install homingpigeondev
+```
+
+```python
+import homingpigeondev
+
+homingpigeondev.send("Backtest finished.")
+```
+
+No dependencies. It finds the key in `HOMINGPIGEON_API_KEY` or the one saved when you verified, so a phone verified through your agent or the CLI works here too. Details are in [python/README.md](python/README.md).
+
 ## Use it from any code
 
 ```sh
@@ -75,16 +89,6 @@ curl -X POST https://homingpigeon.dev/v1/send \
   -H "Authorization: Bearer $HOMINGPIGEON_API_KEY" \
   -H 'Content-Type: application/json' \
   -d '{"message": "Backtest finished."}'
-```
-
-```python
-import os, requests
-
-requests.post(
-    "https://homingpigeon.dev/v1/send",
-    headers={"Authorization": f"Bearer {os.environ['HOMINGPIGEON_API_KEY']}"},
-    json={"message": "Backtest finished."},
-)
 ```
 
 Run `homingpigeon key` to print your key, and keep it out of git. The full API is in [llms.txt](llms.txt) and at [homingpigeon.dev/openapi.json](https://homingpigeon.dev/openapi.json).

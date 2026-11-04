@@ -58,6 +58,13 @@ message is the only required field. There is no "to" field, because the key is t
 
 Add "idempotency_key" so a retried call cannot double-text. The text arrives as "[my-bot] Backtest finished."
 
+From Python, with no dependencies and the same key:
+
+   pip install homingpigeondev
+
+   import homingpigeondev
+   homingpigeondev.send("Backtest finished.", idempotency_key="backtest-42")
+
 ## Status
 
    curl https://homingpigeon.dev/v1/status -H "Authorization: Bearer $HOMINGPIGEON_API_KEY"
@@ -93,6 +100,7 @@ Every error has a code, a message and a next_step. Follow next_step.
 - [Website](https://homingpigeon.dev/)
 - [OpenAPI spec](https://homingpigeon.dev/openapi.json)
 - [npm package](https://www.npmjs.com/package/homingpigeondev)
+- [Python package](https://pypi.org/project/homingpigeondev/)
 - [Source](https://github.com/homingpigeondev/homingpigeondev)
 - [Ways to get text alerts from your code, compared](https://homingpigeon.dev/text-alert-options)
 - [Homing Pigeon vs. Textbelt](https://homingpigeon.dev/textbelt-alternative)
