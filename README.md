@@ -21,7 +21,13 @@ claude plugin install homingpigeondev --marketplace homingpigeondev/homingpigeon
 
 # Codex
 codex mcp add homingpigeondev -- npx -y homingpigeondev mcp
+
+# Codex, as a plugin with the Homing Pigeon skill
+codex plugin marketplace add homingpigeondev/homingpigeondev
+codex plugin add homingpigeondev@homingpigeondev
 ```
+
+Agents that load [Agent Skills](https://agentskills.io) can use [skills/homingpigeon/SKILL.md](skills/homingpigeon/SKILL.md).
 
 For Cursor, Cline, Windsurf and other clients set up with JSON, add this to their MCP settings file (for Cursor, `~/.cursor/mcp.json`):
 

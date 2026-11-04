@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "homingpigeondev",
+  "version": "0.1.2",
+  "description": "Homing Pigeon (homingpigeon.dev) sends text-message alerts from your code or your coding agent to one phone: yours. No carrier registration, no app, no browser signup. Free to start.",
+  "license": "MIT",
+  "homepage": "https://homingpigeon.dev",
+  "repository": "https://github.com/homingpigeondev/homingpigeondev"
+}

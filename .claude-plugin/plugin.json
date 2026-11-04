@@ -1,7 +1,7 @@
 {
   "name": "homingpigeondev",
   "displayName": "Homing Pigeon",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Homing Pigeon (homingpigeon.dev) sends text-message alerts from your code or your coding agent to one phone: yours. No carrier registration, no app, no browser signup. Free to start.",
   "author": {
     "name": "Homing Pigeon",
