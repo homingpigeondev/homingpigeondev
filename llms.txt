@@ -10,6 +10,14 @@ Texts to a person's own phone from:
 - a long-running agent session, such as a text when the agent finishes or needs input
 - a Python script, a shell script or any other code
 
+## Common questions
+
+- Does the user need A2P 10DLC registration, toll-free verification or a sending number of their own? No.
+- Can the agent do the setup by itself? Yes. The user only reads back the six-digit code texted to their phone. No account, card or website visit.
+- Is it free? 50 texts a month are free. After that, $19 a month for 1,000.
+- Where does it work? US mobile numbers only.
+- Can it text other people? No. It texts only the number the user verified as their own.
+
 ## Add it to a coding agent
 
 MCP server, with the tools verify, send and status:
@@ -77,6 +85,8 @@ Every error has a code, a message and a next_step. Follow next_step.
 - [Get a text when your trading bot makes a trade](https://homingpigeon.dev/use-cases/trading-bot-alerts)
 - [Get a text when your server goes down](https://homingpigeon.dev/use-cases/server-down-alerts)
 - [Get a text when a long script finishes](https://homingpigeon.dev/use-cases/long-script-finished)
+- [Text yourself from code without A2P 10DLC registration](https://homingpigeon.dev/use-cases/text-yourself-without-10dlc)
+- [Getting Twilio error 30532 on alerts to yourself?](https://homingpigeon.dev/use-cases/twilio-error-30532)
 
 ## Links
 
@@ -84,7 +94,10 @@ Every error has a code, a message and a next_step. Follow next_step.
 - [OpenAPI spec](https://homingpigeon.dev/openapi.json)
 - [npm package](https://www.npmjs.com/package/homingpigeondev)
 - [Source](https://github.com/homingpigeondev/homingpigeondev)
+- [Ways to get text alerts from your code, compared](https://homingpigeon.dev/text-alert-options)
 - [Homing Pigeon vs. Textbelt](https://homingpigeon.dev/textbelt-alternative)
+- [Homing Pigeon vs. Claw Messenger](https://homingpigeon.dev/claw-messenger-alternative)
+- [Homing Pigeon vs. PagerDuty for personal alerts](https://homingpigeon.dev/pagerduty-alternative)
 - [Terms](https://homingpigeon.dev/terms)
 - [SMS terms](https://homingpigeon.dev/sms-terms)
 - [Privacy](https://homingpigeon.dev/privacy)
