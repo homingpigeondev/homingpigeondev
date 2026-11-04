@@ -101,6 +101,7 @@ Every error has a code, a message and a next_step. Follow next_step.
 - [Get a text when a long script finishes](https://homingpigeon.dev/use-cases/long-script-finished)
 - [Text yourself from code without A2P 10DLC registration](https://homingpigeon.dev/use-cases/text-yourself-without-10dlc)
 - [Getting Twilio error 30532 on alerts to yourself?](https://homingpigeon.dev/use-cases/twilio-error-30532)
+- [Getting Twilio error 30034 on alerts to your own phone?](https://homingpigeon.dev/use-cases/twilio-error-30034)
 
 ## Links
 
