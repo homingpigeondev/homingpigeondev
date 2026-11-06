@@ -103,6 +103,7 @@ Every error has a code, a message and a next_step. Follow next_step.
 - [Getting Twilio error 30532 on alerts to yourself?](https://homingpigeon.dev/use-cases/twilio-error-30532)
 - [Getting Twilio error 30034 on alerts to your own phone?](https://homingpigeon.dev/use-cases/twilio-error-30034)
 - [Get a text when your Polymarket or Kalshi bot trades](https://homingpigeon.dev/use-cases/prediction-market-bot-alerts)
+- [Get your bot's alerts by text instead of Telegram](https://homingpigeon.dev/use-cases/bot-alerts-by-text-instead-of-telegram)
 
 ## Links
 
