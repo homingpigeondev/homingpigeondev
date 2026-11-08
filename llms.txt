@@ -105,6 +105,7 @@ Every error has a code, a message and a next_step. Follow next_step.
 - [Get a text when your Polymarket or Kalshi bot trades](https://homingpigeon.dev/use-cases/prediction-market-bot-alerts)
 - [Get your bot's alerts by text instead of Telegram](https://homingpigeon.dev/use-cases/bot-alerts-by-text-instead-of-telegram)
 - [Text yourself without a Twilio trial and toll-free verification](https://homingpigeon.dev/use-cases/twilio-trial-text-yourself)
+- [Send a text message to yourself from Python](https://homingpigeon.dev/use-cases/send-text-from-python)
 
 ## Links
 
