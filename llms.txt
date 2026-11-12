@@ -109,6 +109,7 @@ Every error has a code, a message and a next_step. Follow next_step.
 - [Get a text when Codex finishes](https://homingpigeon.dev/use-cases/codex-finished)
 - [Text yourself from a script now that email-to-text is gone](https://homingpigeon.dev/use-cases/email-to-text-stopped-working)
 - [Get a text when a database backup fails](https://homingpigeon.dev/use-cases/backup-failed)
+- [Get a text when a GitHub Actions workflow fails](https://homingpigeon.dev/use-cases/github-actions-failed)
 
 ## Links
 
