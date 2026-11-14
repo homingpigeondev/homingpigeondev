@@ -111,6 +111,7 @@ Every error has a code, a message and a next_step. Follow next_step.
 - [Get a text when a database backup fails](https://homingpigeon.dev/use-cases/backup-failed)
 - [Get a text when a GitHub Actions workflow fails](https://homingpigeon.dev/use-cases/github-actions-failed)
 - [Send a text to yourself from AWS Lambda](https://homingpigeon.dev/use-cases/send-text-from-aws-lambda)
+- [Get a text when a price drops](https://homingpigeon.dev/use-cases/price-drop-alerts)
 
 ## Links
 
