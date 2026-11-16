@@ -113,6 +113,7 @@ Every error has a code, a message and a next_step. Follow next_step.
 - [Send a text to yourself from AWS Lambda](https://homingpigeon.dev/use-cases/send-text-from-aws-lambda)
 - [Get a text when a price drops](https://homingpigeon.dev/use-cases/price-drop-alerts)
 - [Send a text to yourself from Django](https://homingpigeon.dev/use-cases/send-text-from-django)
+- [Get a text when your disk is almost full](https://homingpigeon.dev/use-cases/disk-space-low)
 
 ## Links
 
