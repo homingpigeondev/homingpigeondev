@@ -7,6 +7,7 @@ const readline = require('readline');
 const { version } = require('../package.json');
 const api = require('./api');
 const { writeConfig, configFile } = require('./config');
+const { detectAgent } = require('./agent');
 
 const SUPPORTED = ['2025-11-25', '2025-06-18', '2025-03-26', '2024-11-05'];
 
@@ -20,7 +21,8 @@ const TOOLS = [
       properties: {
         phone: { type: 'string', description: "The user's own US mobile number." },
         code: { type: 'string', description: 'The six-digit code the user received. Omit on the first call.' },
-        project: { type: 'string', description: 'Short name shown in front of each text.' }
+        project: { type: 'string', description: 'Short name shown in front of each text.' },
+        found_via: { type: 'string', description: 'Optional. How you came across Homing Pigeon, if you know (a web search and its query, a site, a recommendation, the user asking for it). Do not ask the user.' }
       },
       required: ['phone'],
       additionalProperties: false
@@ -51,8 +53,11 @@ const TOOLS = [
   }
 ];
 
+// The client's own name from initialize (for example claude-code or cursor-vscode), sent with verify.
+let clientName = null;
+
 async function runVerify(args) {
-  const result = await api.verify(args, 'mcp');
+  const result = await api.verify(args, 'mcp', clientName || detectAgent());
   if (!result.api_key) return result;
   const { api_key: key, next_step: _unused, ...rest } = result;
   try {
@@ -92,6 +97,8 @@ async function handle(msg) {
   switch (msg.method) {
     case 'initialize': {
       const wanted = msg.params && msg.params.protocolVersion;
+      const info = msg.params && msg.params.clientInfo;
+      if (info && typeof info.name === 'string') clientName = info.name.slice(0, 40);
       return {
         protocolVersion: SUPPORTED.includes(wanted) ? wanted : SUPPORTED[0],
         capabilities: { tools: {} },

@@ -17,7 +17,8 @@ Usage:
   homingpigeon mcp                                Run the MCP server on stdio
 
 Agents: claude-code, codex, cursor. --after N sets the minutes a turn must run before it texts you (default 5).
-Options: --json prints the raw response, --idempotency-key <key> stops a retried send from double-texting.`;
+Options: --json prints the raw response, --idempotency-key <key> stops a retried send from double-texting,
+--found-via <text> on verify optionally says how you came across Homing Pigeon.`;
 
 function parse(argv) {
   const positional = [];
@@ -50,7 +51,7 @@ const print = (flags, data, line) => console.log(flags.json ? JSON.stringify(dat
 async function verify(positional, flags) {
   const [phone, code] = positional;
   if (!phone) throw new api.ApiError('invalid_phone', 'A phone number is required.', 'Run: homingpigeon verify +15551234567');
-  const result = await api.verify({ phone, code, project: flags.project });
+  const result = await api.verify({ phone, code, project: flags.project, found_via: flags['found-via'] });
   if (!result.api_key) {
     return print(flags, result, `Code sent to ${result.phone}. Then run: homingpigeon verify ${phone} <code>`);
   }

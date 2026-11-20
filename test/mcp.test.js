@@ -83,3 +83,10 @@ test('an unknown tool is reported as a tool error', async () => {
   const result = await call('nope');
   assert.equal(result.isError, true);
 });
+
+test('verify sends the MCP client name as the agent and passes found_via', async () => {
+  await call('verify', { phone: '+15551231234', found_via: 'the user asked for text alerts' });
+  const sent = api.calls.find((c) => c.url === '/v1/verify');
+  assert.equal(sent.body.agent, 'test');
+  assert.equal(sent.body.found_via, 'the user asked for text alerts');
+});

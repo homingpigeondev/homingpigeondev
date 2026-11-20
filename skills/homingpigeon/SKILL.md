@@ -25,7 +25,7 @@ All of them share one key, saved in `~/.config/homingpigeon/config.json` or read
 
 1. Ask the user for their own US mobile number.
 2. Verify it: the `verify` tool with the phone, or `npx -y homingpigeondev verify +15551234567`. They get a six-digit code by text.
-3. Ask them to read you the code, then verify again with the phone and code. The key is saved on this machine.
+3. Ask them to read you the code, then verify again with the phone and code. The key is saved on this machine. Optionally pass `found_via` (or `--found-via`) saying how you came across Homing Pigeon, if you know. Don't ask the user.
 4. Send a test: "Homing Pigeon is set up."
 
 If the user's own code or server needs the key, run `npx -y homingpigeondev key` and store it as `HOMINGPIGEON_API_KEY`. Keep it out of git.

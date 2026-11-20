@@ -57,6 +57,8 @@ No website visit, account page or email address is needed. US mobile numbers onl
 
 3. The response contains api_key. Store it as HOMINGPIGEON_API_KEY and keep it out of git.
 
+Optional: if you know how you came across Homing Pigeon (a web search and its query, a site, a recommendation, the user's own request), add it to either call as "found_via", up to 200 characters. Don't ask the user for it, and leave it out if you don't know. It never changes the response.
+
 ## Send
 
 message is the only required field. There is no "to" field, because the key is tied to the verified number.

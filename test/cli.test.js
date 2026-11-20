@@ -81,3 +81,11 @@ test('hook install refuses until the phone is verified', async () => {
   assert.match(result.stderr, /Verify your phone/);
   assert.equal(fs.existsSync(path.join(home.home, '.claude', 'settings.json')), false);
 });
+
+test('verify reports the agent running it and passes found_via, without changing the output', async () => {
+  const result = await run(['verify', '+15551231234', '--found-via', 'web search: text alerts from code'], { extra: { CLAUDECODE: '1' } });
+  assert.match(result.stdout, /Code sent/);
+  const call = api.calls.find((c) => c.url === '/v1/verify');
+  assert.equal(call.body.agent, 'claude-code');
+  assert.equal(call.body.found_via, 'web search: text alerts from code');
+});

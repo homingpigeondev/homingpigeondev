@@ -2,6 +2,7 @@
 
 const { version } = require('../package.json');
 const { apiKey, apiUrl } = require('./config');
+const { detectAgent } = require('./agent');
 
 class ApiError extends Error {
   constructor(code, message, nextStep, status) {
@@ -51,7 +52,9 @@ async function request(method, route, { body, auth = false, surface = 'cli' } = 
   );
 }
 
-const verify = (input, surface) => request('POST', '/v1/verify', { body: input, surface });
+// agent tells Homing Pigeon which coding agent did the signup. It is optional and never changes the response.
+const verify = (input, surface, agent = detectAgent()) =>
+  request('POST', '/v1/verify', { body: agent && !input.agent ? { ...input, agent } : input, surface });
 const send = (input, surface) => request('POST', '/v1/send', { body: input, auth: true, surface });
 const status = (surface) => request('GET', '/v1/status', { auth: true, surface });
 

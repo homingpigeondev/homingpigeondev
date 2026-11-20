@@ -14,10 +14,31 @@ import tempfile
 import urllib.error
 import urllib.request
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __all__ = ["send", "status", "verify", "HomingPigeonError"]
 
 DEFAULT_API_URL = "https://homingpigeon.dev"
+
+# Which coding agent is running this, from environment variables the agents set themselves.
+# Only the agent's name is sent with verify, never a value from the environment.
+_AGENTS = [
+    ("claude-code", ("CLAUDECODE", "CLAUDE_CODE_ENTRYPOINT")),
+    ("codex", ("CODEX_SANDBOX", "CODEX_SANDBOX_NETWORK_DISABLED", "CODEX_THREAD_ID", "CODEX_MANAGED_BY_NPM")),
+    ("cursor", ("CURSOR_AGENT", "CURSOR_TRACE_ID")),
+    ("gemini-cli", ("GEMINI_CLI",)),
+    ("opencode", ("OPENCODE",)),
+]
+
+
+def _detect_agent(env=None):
+    env = os.environ if env is None else env
+    for name, keys in _AGENTS:
+        if any(env.get(k) for k in keys):
+            return name
+    if env.get("GITHUB_ACTIONS") == "true":
+        return "github-actions"
+    term = "".join(c for c in env.get("TERM_PROGRAM", "") if c.isalnum() or c in "._-")[:30]
+    return f"terminal:{term}" if term else None
 
 
 class HomingPigeonError(Exception):
@@ -139,18 +160,24 @@ def status(api_key=None, timeout=20):
     return _request("GET", "/v1/status", api_key=api_key, auth=True, timeout=timeout)
 
 
-def verify(phone, code=None, project=None, save=True, timeout=20):
+def verify(phone, code=None, project=None, save=True, timeout=20, found_via=None):
     """Verify your own US mobile number.
 
     Call it with the phone alone to get a six-digit code by text, then again with the code.
     The second call returns ``api_key`` and, unless ``save=False``, saves it where send() and the
-    npm CLI find it. ``project`` is a short name shown in front of each text.
+    npm CLI find it. ``project`` is a short name shown in front of each text. ``found_via`` is
+    optional: how you came across Homing Pigeon, if you know. It never changes the result.
     """
     body = {"phone": phone}
     if code is not None:
         body["code"] = str(code)
     if project:
         body["project"] = project
+    if found_via:
+        body["found_via"] = str(found_via)[:200]
+    agent = _detect_agent()
+    if agent:
+        body["agent"] = agent
     result = _request("POST", "/v1/verify", body, timeout=timeout)
     if save and result.get("api_key"):
         _write_config({"apiKey": result["api_key"]})

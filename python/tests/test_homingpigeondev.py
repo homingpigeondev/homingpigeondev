@@ -16,6 +16,9 @@ import homingpigeondev  # noqa: E402
 from homingpigeondev.__main__ import main  # noqa: E402
 
 
+AGENT_KEYS = {k for _, keys in homingpigeondev._AGENTS for k in keys} | {"GITHUB_ACTIONS", "TERM_PROGRAM"}
+
+
 class Mock(BaseHTTPRequestHandler):
     requests = []
     reply = None  # (status, body) to force, else the default for the route
@@ -64,6 +67,8 @@ class Base(unittest.TestCase):
         self.dir = tempfile.TemporaryDirectory()
         self.env = {"HOMINGPIGEON_API_URL": self.url, "HOMINGPIGEON_CONFIG_DIR": self.dir.name}
         self.saved = {k: os.environ.pop(k, None) for k in ("HOMINGPIGEON_API_URL", "HOMINGPIGEON_CONFIG_DIR", "HOMINGPIGEON_API_KEY")}
+        # The tests may themselves run inside a coding agent; keep agent detection out of them.
+        self.agent_env = {k: os.environ.pop(k) for k in list(os.environ) if k in AGENT_KEYS}
         os.environ.update(self.env)
 
     def tearDown(self):
@@ -71,6 +76,7 @@ class Base(unittest.TestCase):
             os.environ.pop(k, None)
             if self.saved[k] is not None:
                 os.environ[k] = self.saved[k]
+        os.environ.update(self.agent_env)
         self.dir.cleanup()
 
     def config(self):
@@ -158,6 +164,23 @@ class VerifyTest(Base):
     def test_verify_save_false(self):
         homingpigeondev.verify("+15551234567", "123456", save=False)
         self.assertFalse(os.path.exists(os.path.join(self.dir.name, "config.json")))
+
+
+    def test_verify_reports_the_agent_and_found_via(self):
+        os.environ["CLAUDECODE"] = "1"
+        try:
+            homingpigeondev.verify("+15551234567", found_via="web search: text alerts from python")
+        finally:
+            os.environ.pop("CLAUDECODE")
+        self.assertEqual(
+            Mock.requests[-1]["body"],
+            {"phone": "+15551234567", "found_via": "web search: text alerts from python", "agent": "claude-code"},
+        )
+
+    def test_detect_agent(self):
+        self.assertEqual(homingpigeondev._detect_agent({"CODEX_SANDBOX": "seatbelt"}), "codex")
+        self.assertEqual(homingpigeondev._detect_agent({"TERM_PROGRAM": "a b<c>"}), "terminal:abc")
+        self.assertIsNone(homingpigeondev._detect_agent({}))
 
 
 class CliTest(Base):
