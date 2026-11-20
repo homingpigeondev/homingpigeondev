@@ -33,6 +33,14 @@ In Claude, ChatGPT and other apps that take a connector URL, the user signs in w
 
 Agent Skill, for agents that load skills: https://github.com/homingpigeondev/homingpigeondev/blob/main/skills/homingpigeon/SKILL.md
 
+GitHub Action, to text the user from a workflow, for example when a job fails (https://github.com/homingpigeondev/notify):
+
+   - if: failure()
+     uses: homingpigeondev/notify@v1
+     with:
+       message: "${{ github.workflow }} failed on ${{ github.ref_name }}"
+       api-key: ${{ secrets.HOMINGPIGEON_API_KEY }}
+
 CLI, installs homingpigeon with the alias pigeon:
 
    npm install -g homingpigeondev
