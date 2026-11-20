@@ -117,6 +117,7 @@ Every error has a code, a message and a next_step. Follow next_step.
 - [Get a text when your coding agent needs your approval](https://homingpigeon.dev/use-cases/agent-waiting-on-you)
 - [Send a text to yourself from Google Sheets](https://homingpigeon.dev/use-cases/send-text-from-google-sheets)
 - [Get a text when your training loss goes NaN](https://homingpigeon.dev/use-cases/training-loss-nan)
+- [Send a text to yourself from Next.js](https://homingpigeon.dev/use-cases/send-text-from-nextjs)
 
 ## Links
 
