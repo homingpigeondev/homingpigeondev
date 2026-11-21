@@ -128,6 +128,7 @@ Every error has a code, a message and a next_step. Follow next_step.
 - [Send a text to yourself from Google Sheets](https://homingpigeon.dev/use-cases/send-text-from-google-sheets)
 - [Get a text when your training loss goes NaN](https://homingpigeon.dev/use-cases/training-loss-nan)
 - [Send a text to yourself from Next.js](https://homingpigeon.dev/use-cases/send-text-from-nextjs)
+- [Get a text when someone signs up for your app](https://homingpigeon.dev/use-cases/new-signup-alerts)
 
 ## Links
 
