@@ -130,6 +130,7 @@ Every error has a code, a message and a next_step. Follow next_step.
 - [Send a text to yourself from Next.js](https://homingpigeon.dev/use-cases/send-text-from-nextjs)
 - [Get a text when someone signs up for your app](https://homingpigeon.dev/use-cases/new-signup-alerts)
 - [Get a text before your SSL certificate expires](https://homingpigeon.dev/use-cases/ssl-certificate-expiring)
+- [Send a text to yourself from Cloudflare Workers](https://homingpigeon.dev/use-cases/send-text-from-cloudflare-workers)
 
 ## Links
 
