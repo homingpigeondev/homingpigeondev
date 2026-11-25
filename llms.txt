@@ -132,6 +132,7 @@ Every error has a code, a message and a next_step. Follow next_step.
 - [Get a text before your SSL certificate expires](https://homingpigeon.dev/use-cases/ssl-certificate-expiring)
 - [Send a text to yourself from Cloudflare Workers](https://homingpigeon.dev/use-cases/send-text-from-cloudflare-workers)
 - [Send a text message to yourself from Node.js](https://homingpigeon.dev/use-cases/send-text-from-node)
+- [Send a text to yourself from Express](https://homingpigeon.dev/use-cases/send-text-from-express)
 
 ## Links
 
