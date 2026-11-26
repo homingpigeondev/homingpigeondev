@@ -133,6 +133,7 @@ Every error has a code, a message and a next_step. Follow next_step.
 - [Send a text to yourself from Cloudflare Workers](https://homingpigeon.dev/use-cases/send-text-from-cloudflare-workers)
 - [Send a text message to yourself from Node.js](https://homingpigeon.dev/use-cases/send-text-from-node)
 - [Send a text to yourself from Express](https://homingpigeon.dev/use-cases/send-text-from-express)
+- [Get a text when something is back in stock](https://homingpigeon.dev/use-cases/back-in-stock-alerts)
 
 ## Links
 
