@@ -135,6 +135,7 @@ Every error has a code, a message and a next_step. Follow next_step.
 - [Send a text to yourself from Express](https://homingpigeon.dev/use-cases/send-text-from-express)
 - [Get a text when something is back in stock](https://homingpigeon.dev/use-cases/back-in-stock-alerts)
 - [Text yourself without registering an AWS SNS phone number](https://homingpigeon.dev/use-cases/aws-sns-text-yourself)
+- [Get a text when a deploy finishes or fails](https://homingpigeon.dev/use-cases/deploy-finished)
 
 ## Links
 
